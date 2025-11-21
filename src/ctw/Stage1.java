@@ -5,21 +5,38 @@
  */
 package ctw;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author desti
  */
-public class Stage1 extends javax.swing.JFrame {
+public class Stage1 extends javax.swing.JDialog {
 
     /**
      * Creates new form Stage1
      */
-    public Stage1() {
+    public Stage1(java.awt.Frame parent, boolean modal) {
+        super(parent, modal);
         initComponents();
         lblA.setText("");
         lblE.setText("");
         lblS.setText("");
         lblT.setText("");
+    }
+    
+    public void fillTheGaps(String letter){
+        if(lblE.getText() == ""){
+            lblE.setText(letter);
+        }else if(lblA.getText() == ""){
+            lblA.setText(letter);
+        }else if(lblT.getText() == ""){
+            lblT.setText(letter);
+        }else if(lblS.getText() == ""){
+            lblS.setText(letter);
+        }else{
+            JOptionPane.showMessageDialog(rootPane, "You have completed the task");
+        }
     }
 
     /**
@@ -41,8 +58,25 @@ public class Stage1 extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         lblS = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        btnA = new javax.swing.JButton();
+        btnE = new javax.swing.JButton();
+        btnT = new javax.swing.JButton();
+        btnR = new javax.swing.JButton();
+        btnS = new javax.swing.JButton();
+        btnY = new javax.swing.JButton();
+        btnK = new javax.swing.JButton();
+        btnU = new javax.swing.JButton();
+        btnP = new javax.swing.JButton();
+        btnO = new javax.swing.JButton();
+        btnZ = new javax.swing.JButton();
+        btnQ = new javax.swing.JButton();
+        btnL = new javax.swing.JButton();
+        btnM = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Stage 1 - Complete The Word");
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -61,19 +95,16 @@ public class Stage1 extends javax.swing.JFrame {
         lblE.setBackground(new java.awt.Color(204, 204, 255));
         lblE.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lblE.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblE.setText("E");
         lblE.setOpaque(true);
 
         lblA.setBackground(new java.awt.Color(204, 204, 255));
         lblA.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lblA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblA.setText("A");
         lblA.setOpaque(true);
 
         lblT.setBackground(new java.awt.Color(204, 204, 255));
         lblT.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lblT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblT.setText("T");
         lblT.setOpaque(true);
 
         jLabel6.setBackground(new java.awt.Color(204, 204, 255));
@@ -97,7 +128,6 @@ public class Stage1 extends javax.swing.JFrame {
         lblS.setBackground(new java.awt.Color(204, 204, 255));
         lblS.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lblS.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblS.setText("S");
         lblS.setOpaque(true);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -142,25 +172,142 @@ public class Stage1 extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnA.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        btnA.setText("A");
+        btnA.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAMouseClicked(evt);
+            }
+        });
+        jPanel2.add(btnA, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 16, 88, 79));
+
+        btnE.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        btnE.setText("E");
+        btnE.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnEMouseClicked(evt);
+            }
+        });
+        jPanel2.add(btnE, new org.netbeans.lib.awtextra.AbsoluteConstraints(121, 16, 88, 79));
+
+        btnT.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        btnT.setText("T");
+        jPanel2.add(btnT, new org.netbeans.lib.awtextra.AbsoluteConstraints(227, 16, 88, 79));
+
+        btnR.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        btnR.setText("R");
+        jPanel2.add(btnR, new org.netbeans.lib.awtextra.AbsoluteConstraints(333, 16, 88, 79));
+
+        btnS.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        btnS.setText("S");
+        jPanel2.add(btnS, new org.netbeans.lib.awtextra.AbsoluteConstraints(436, 16, 88, 79));
+
+        btnY.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        btnY.setText("Y");
+        jPanel2.add(btnY, new org.netbeans.lib.awtextra.AbsoluteConstraints(542, 16, 88, 79));
+
+        btnK.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        btnK.setText("K");
+        btnK.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnKMouseClicked(evt);
+            }
+        });
+        jPanel2.add(btnK, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 104, 88, 79));
+
+        btnU.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        btnU.setText("U");
+        btnU.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnUMouseClicked(evt);
+            }
+        });
+        jPanel2.add(btnU, new org.netbeans.lib.awtextra.AbsoluteConstraints(121, 104, 88, 79));
+
+        btnP.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        btnP.setText("P");
+        jPanel2.add(btnP, new org.netbeans.lib.awtextra.AbsoluteConstraints(227, 104, 88, 79));
+
+        btnO.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        btnO.setText("O");
+        jPanel2.add(btnO, new org.netbeans.lib.awtextra.AbsoluteConstraints(333, 104, 88, 79));
+
+        btnZ.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        btnZ.setText("Z");
+        jPanel2.add(btnZ, new org.netbeans.lib.awtextra.AbsoluteConstraints(436, 104, 88, 79));
+
+        btnQ.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        btnQ.setText("Q");
+        jPanel2.add(btnQ, new org.netbeans.lib.awtextra.AbsoluteConstraints(542, 104, 88, 79));
+
+        btnL.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        btnL.setText("L");
+        jPanel2.add(btnL, new org.netbeans.lib.awtextra.AbsoluteConstraints(648, 16, 88, 79));
+
+        btnM.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        btnM.setText("M");
+        jPanel2.add(btnM, new org.netbeans.lib.awtextra.AbsoluteConstraints(648, 104, 88, 79));
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 51, 255));
+        jLabel3.setText("Find The Missing Letters");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(46, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(46, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 475, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 247, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(39, 39, 39)
+                .addGap(47, 47, 47)
+                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 64, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(340, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(819, 529));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAMouseClicked
+        String letter = btnA.getText();
+        fillTheGaps(letter);
+        btnA.setVisible(false);
+    }//GEN-LAST:event_btnAMouseClicked
+
+    private void btnEMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEMouseClicked
+        String letter = btnE.getText();
+        fillTheGaps(letter);
+        btnE.setVisible(false);
+    }//GEN-LAST:event_btnEMouseClicked
+
+    private void btnKMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnKMouseClicked
+        String letter = btnK.getText();
+        fillTheGaps(letter);
+        btnK.setVisible(false);
+    }//GEN-LAST:event_btnKMouseClicked
+
+    private void btnUMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnUMouseClicked
+        String letter = btnU.getText();
+        fillTheGaps(letter);
+        btnU.setVisible(false);
+    }//GEN-LAST:event_btnUMouseClicked
 
     /**
      * @param args the command line arguments
@@ -189,21 +336,44 @@ public class Stage1 extends javax.swing.JFrame {
         }
         //</editor-fold>
 
-        /* Create and display the form */
+        /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Stage1().setVisible(true);
+                Stage1 dialog = new Stage1(new javax.swing.JFrame(), true);
+                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+                    @Override
+                    public void windowClosing(java.awt.event.WindowEvent e) {
+                        System.exit(0);
+                    }
+                });
+                dialog.setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnA;
+    private javax.swing.JButton btnE;
+    private javax.swing.JButton btnK;
+    private javax.swing.JButton btnL;
+    private javax.swing.JButton btnM;
+    private javax.swing.JButton btnO;
+    private javax.swing.JButton btnP;
+    private javax.swing.JButton btnQ;
+    private javax.swing.JButton btnR;
+    private javax.swing.JButton btnS;
+    private javax.swing.JButton btnT;
+    private javax.swing.JButton btnU;
+    private javax.swing.JButton btnY;
+    private javax.swing.JButton btnZ;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lblA;
     private javax.swing.JLabel lblE;
     private javax.swing.JLabel lblS;
